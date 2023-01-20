@@ -18,6 +18,8 @@ function deal_disorders(deck, x, color)
         local card = deck.dealToColorWithOffset({x  + (i * 3), 0, 5}, false, color)        
         local name = card.getName()
 
+-- print(i, " - ", name) -- debug printing
+
         -- check that card does not already exist in psyche
         for j = 1, 4 do            
             -- early out when psyche is not full
@@ -47,9 +49,13 @@ function set_up_game()
     disorders.randomize()
 
     -- deal disorders for 4 players 
+-- print("ONE") -- debug printing
     deal_disorders(disorders,   -7, "White")
+-- print("TWO") -- debug printing
     deal_disorders(disorders, -2.1, "Red")
+-- print("THREE") -- debug printing
     deal_disorders(disorders,   -7, "Green")
+-- print("FOUR") -- debug printing
     deal_disorders(disorders, -2.1, "Blue")
 
     -- add remaining disorders to deck and shuffle
