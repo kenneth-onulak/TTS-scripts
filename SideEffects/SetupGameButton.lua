@@ -1,5 +1,7 @@
-DISORDER_DECK_GUID = Global.getVar('DISORDER_DECK_GUID')
-MAIN_DECK_GUID     = Global.getVar('MAIN_DECK_GUID')
+-- Add these GUIDs to Global with the same name
+-- i.e DISORDER_DECK_GUID = "123ABC"
+DISORDER_DECK_GUID = Global.getVar('DISORDER_DECK_GUID') -- face up disorders
+MAIN_DECK_GUID     = Global.getVar('MAIN_DECK_GUID')     -- face down deck
 
 -- deal 4 unique disorder to a player
 function deal_disorders(deck, x, color)
